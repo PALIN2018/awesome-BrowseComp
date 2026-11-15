@@ -87,28 +87,29 @@ flowchart LR
 
 ```mermaid
 timeline
-    title Releases of the BrowseComp family
-    2025 : Apr · BrowseComp (OpenAI)
-         : Apr · BrowseComp-ZH
-         : May · MedBrowseComp
-         : Aug · BrowseComp-Plus
-         : Aug · MM-BrowseComp
-         : Aug · BrowseComp-VL
-         : Aug · WideSearch
-         : Sep · FinSearchComp (ICLR 2026)
-         : 2025 · xbench-DeepSearch (2505 / 2510)
-         : Dec · DeepSearchQA (Google)
-    2026 : Feb · BrowseComp-V³
-         : May · LiveBrowseComp
-         : Jun · XBCP
-         : Jun · K-BrowseComp
-         : Jun · EvoBrowseComp
-         : Jun · LoHoSearch
-         : Jun · Ko-WideSearch
-         : Jul · WANDR
-         : Oct · HyperBrowseComp
-         : Oct · SnapshotBrowseComp
-         : Oct · ATLAS
+    title BrowseComp family releases, by month
+    2025-04 : BrowseComp (OpenAI)
+            : BrowseComp-ZH
+    2025-05 : MedBrowseComp
+            : xbench-DeepSearch 2505
+    2025-08 : BrowseComp-Plus
+            : MM-BrowseComp
+            : BrowseComp-VL
+            : WideSearch
+    2025-09 : FinSearchComp
+    2025-10 : xbench-DeepSearch 2510
+    2025-12 : DeepSearchQA
+    2026-02 : BrowseComp-V³
+    2026-05 : LiveBrowseComp
+    2026-06 : XBCP
+            : K-BrowseComp
+            : EvoBrowseComp
+            : LoHoSearch
+            : Ko-WideSearch
+    2026-07 : WANDR
+    2026-10 : HyperBrowseComp
+            : SnapshotBrowseComp
+            : ATLAS
 ```
 
 ## How this list is organised

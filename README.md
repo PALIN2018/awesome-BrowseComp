@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Awesome BrowseComp — the BrowseComp benchmark family, in one list" width="100%">
+  <img src="assets/banner.png" alt="Awesome BrowseComp — the BrowseComp benchmark family, in one list" width="100%">
 </p>
 
 <p align="center">

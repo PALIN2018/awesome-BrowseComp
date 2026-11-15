@@ -358,13 +358,21 @@ A community (non-official) 15-question proxy of BrowseComp-Plus for cheap local 
 
 ```mermaid
 xychart-beta
-    title "Questions per benchmark (independent variants)"
-    x-axis ["BC", "Plus", "XBCP", "ZH", "K", "Snap", "Hyper", "MM", "VL", "V3", "Live", "Evo", "Med", "Wide", "DSQA", "KoW", "ATLAS", "WANDR", "Fin", "LoHo", "xB"]
+    title "Questions per benchmark — depth-format lines"
+    x-axis ["BC", "Plus", "XBCP", "ZH", "K", "Snap", "Hyper", "MM", "VL", "V3", "Live", "Evo", "Med"]
     y-axis "Questions" 0 --> 1300
-    bar [1266, 830, 830, 289, 400, 250, 423, 400, 399, 300, 335, 800, 1089, 200, 900, 228, 547, 500, 635, 544, 200]
+    bar [1266, 830, 830, 289, 400, 250, 423, 400, 399, 300, 335, 800, 1089]
 ```
 
-*BC = BrowseComp · Snap = SnapshotBrowseComp · MM = MM-BrowseComp · VL = BrowseComp-VL · V3 = BrowseComp-V³ · DSQA = DeepSearchQA · KoW = Ko-WideSearch · xB = xbench-DeepSearch. Ko-WideSearch counts tables (228); all others count questions/tasks.*
+```mermaid
+xychart-beta
+    title "Questions per benchmark — breadth & depth-successor lines"
+    x-axis ["Wide", "DSQA", "KoW", "ATLAS", "WANDR", "Fin", "LoHo", "xB"]
+    y-axis "Questions / tasks" 0 --> 950
+    bar [200, 900, 228, 547, 500, 635, 544, 200]
+```
+
+*BC = BrowseComp · Snap = SnapshotBrowseComp · MM = MM-BrowseComp · VL = BrowseComp-VL · V3 = BrowseComp-V³ · DSQA = DeepSearchQA · KoW = Ko-WideSearch (counts tables; all others count questions/tasks) · xB = xbench-DeepSearch (two 100-task releases).*
 
 ## A note on conflicting figures
 

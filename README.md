@@ -76,6 +76,8 @@ flowchart LR
     classDef root fill:#173a5e,stroke:#38bdf8,color:#f8fafc,stroke-width:2px;
     classDef line fill:#eef2ff,stroke:#818cf8,color:#1e293b;
     classDef der fill:#fff7ed,stroke:#fb923c,color:#7c2d12,stroke-dasharray:5 5;
+    classDef leaf fill:#f8fafc,stroke:#94a3b8,color:#0f172a;
+    class A1,A2,B1,B2,B3,B4,C1,C2,C3,D1,D2,E1,F1,F2,F3,F4,F5,G1,G2,G3 leaf;
     class ROOT root;
     class L1,L2,L3,L4,L5,L6,L7 line;
     class DER der;
@@ -357,10 +359,12 @@ A community (non-official) 15-question proxy of BrowseComp-Plus for cheap local 
 ```mermaid
 xychart-beta
     title "Questions per benchmark (independent variants)"
-    x-axis ["BrowseComp", "Plus", "XBCP", "ZH", "K", "Snapshot", "Hyper", "MM", "VL", "V3", "Live", "Evo", "Med", "Wide", "DSQA", "KoWide", "ATLAS", "WANDR", "Fin", "LoHo", "xbench"]
+    x-axis ["BC", "Plus", "XBCP", "ZH", "K", "Snap", "Hyper", "MM", "VL", "V3", "Live", "Evo", "Med", "Wide", "DSQA", "KoW", "ATLAS", "WANDR", "Fin", "LoHo", "xB"]
     y-axis "Questions" 0 --> 1300
     bar [1266, 830, 830, 289, 400, 250, 423, 400, 399, 300, 335, 800, 1089, 200, 900, 228, 547, 500, 635, 544, 200]
 ```
+
+*BC = BrowseComp · Snap = SnapshotBrowseComp · MM = MM-BrowseComp · VL = BrowseComp-VL · V3 = BrowseComp-V³ · DSQA = DeepSearchQA · KoW = Ko-WideSearch · xB = xbench-DeepSearch. Ko-WideSearch counts tables (228); all others count questions/tasks.*
 
 ## A note on conflicting figures
 

@@ -31,11 +31,11 @@
     <circle cx="560" cy="300" r="6" fill="#c084fc"/>
   </g>
   <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#cbd5e1">
-    <text x="540" y="90">Language</text>
-    <text x="580" y="144">Multimodal</text>
-    <text x="620" y="198">Fixed corpus</text>
-    <text x="660" y="246">Find-all breadth</text>
-    <text x="580" y="306">Depth successors</text>
+    <text x="548" y="90">Language</text>
+    <text x="588" y="144">Multimodal</text>
+    <text x="628" y="198">Fixed corpus</text>
+    <text x="668" y="246">Find-all breadth</text>
+    <text x="588" y="306">Depth successors</text>
   </g>
 
   <!-- headline -->

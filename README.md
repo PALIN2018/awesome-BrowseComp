@@ -9,6 +9,7 @@
   <img src="https://img.shields.io/badge/derivatives-7-orange" alt="7 derivatives">
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC0-lightgrey.svg" alt="License: CC0"></a>
+  <img src="https://img.shields.io/github/last-commit/PALIN2018/awesome-browsecomp" alt="Last commit">
 </p>
 
 > A curated catalogue of the **BrowseComp benchmark family** — every known variant, derivative and successor of OpenAI's BrowseComp for evaluating browsing and deep-research agents.
@@ -33,6 +34,7 @@
 - [Comparison table](#comparison-table)
 - [A note on conflicting figures](#a-note-on-conflicting-figures)
 - [Coverage notes](#coverage-notes)
+- [Related lists](#related-lists)
 - [Contributing](#contributing)
 - [Citation](#citation)
 - [License](#license)
@@ -399,11 +401,20 @@ Checked and **excluded**: DeepResearch Bench I/II and DRACO (long-report rubrics
 
 *Caveat:* the sweep used search-indexed pages rather than exhaustive API enumeration of GitHub/HF; a release only days old or unindexed could in principle be missed. If you find one, please open an issue or PR.
 
+## Related lists
+
+Neighbouring awesome lists that include parts of this family:
+
+- [TusKANNy/awesome-agentic-search](https://github.com/TusKANNy/awesome-agentic-search) — agentic search systems and benchmarks; includes the original, ZH, Plus, XBCP and the ClimbMix projection.
+- [Necolizer/awesome-rl-for-agents](https://github.com/Necolizer/awesome-rl-for-agents) — RL for agents; includes the original, ZH, Plus and MM-BrowseComp.
+- [RDI-Foundation/awesome-agent-benchmarks](https://github.com/RDI-Foundation/awesome-agent-benchmarks) — agent benchmarks across domains.
+- [zjsxply/llm-capabilities-landscape](https://github.com/zjsxply/llm-capabilities-landscape) — a landscape of LLM capability evaluations, with a web-search benchmark page.
+
 ## Contributing
 
 Contributions are welcome — new variants, corrections, and updated results. Please read [CONTRIBUTING.md](CONTRIBUTING.md) first: entries need a primary source (paper, official repository or dataset page), and conflicting figures are presented side by side, never silently merged.
 
-A machine-readable version of the catalogue is in [`benchmarks.json`](benchmarks.json).
+A machine-readable version of the catalogue is in [`benchmarks.json`](benchmarks.json) and [`benchmarks.csv`](benchmarks.csv).
 
 ## Citation
 
@@ -422,6 +433,17 @@ If this catalogue helps your work, please cite the original benchmark and, for t
   author  = {Zhou, Peilin and others},
   journal = {arXiv preprint arXiv:2504.19314},
   year    = {2025}
+}
+```
+
+To cite this catalogue itself:
+
+```bibtex
+@misc{zhou2026awesomebrowsecomp,
+  title        = {Awesome BrowseComp: A Catalogue of the BrowseComp Benchmark Family},
+  author       = {Zhou, Peilin},
+  year         = {2026},
+  howpublished = {\url{https://github.com/PALIN2018/awesome-browsecomp}}
 }
 ```
 

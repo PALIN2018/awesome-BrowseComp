@@ -1,17 +1,27 @@
-# Awesome BrowseComp [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome BrowseComp — the BrowseComp benchmark family, in one list" width="100%">
+</p>
 
-> A curated, source-verified catalogue of the **BrowseComp benchmark family** — every known variant, derivative and successor of OpenAI's BrowseComp for evaluating browsing and deep-research agents.
+<p align="center">
+  <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
+  <img src="https://img.shields.io/badge/entries-28-blue" alt="28 entries">
+  <img src="https://img.shields.io/badge/independent-21-green" alt="21 independent variants">
+  <img src="https://img.shields.io/badge/derivatives-7-orange" alt="7 derivatives">
+  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC0-lightgrey.svg" alt="License: CC0"></a>
+</p>
+
+> A curated catalogue of the **BrowseComp benchmark family** — every known variant, derivative and successor of OpenAI's BrowseComp for evaluating browsing and deep-research agents.
 >
-> 浏览类 / 深度研究智能体评测基准 BrowseComp 家族的完整清单：变体、衍生与后继工作，均经一手来源核验。
+> 浏览类 / 深度研究智能体评测基准 BrowseComp 家族的完整清单：变体、衍生与后继工作。
 
-![Entries](https://img.shields.io/badge/entries-28-blue) ![Independent variants](https://img.shields.io/badge/independent-21-green) ![Derivatives](https://img.shields.io/badge/derivatives-7-orange) ![Last verified](https://img.shields.io/badge/last%20verified-2026--11--11-brightgreen) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md) [![License: CC0](https://img.shields.io/badge/license-CC0-lightgrey.svg)](LICENSE)
-
-**BrowseComp** (OpenAI, April 2025) set the template for a new kind of evaluation: short, verifiable questions that are easy to check but hard to find — a model must browse persistently, reason over what it finds, and return one exact answer. Within eighteen months the design had been re-implemented across languages, modalities, fixed corpora, live and time-sensitive settings, expert domains, exhaustive "find-all" answer sets, and deliberately harder successors. Until now there was no single place that collected the whole family. This list is that place: **21 independent variants + 7 derivatives/settings = 28 entries**, each checked against its paper, official repository or dataset page.
+**BrowseComp** (OpenAI, April 2025) set the template for a new kind of evaluation: short questions that are easy to check but hard to find — an agent must browse persistently, reason over what it finds, and return one exact answer. Within eighteen months the design had been re-implemented across languages, modalities, fixed corpora, live and time-sensitive settings, expert domains, exhaustive "find-all" answer sets, and deliberately harder successors. This list collects the whole family in one place: **21 independent variants + 7 derivatives/settings = 28 entries**, organised into seven lineage lines.
 
 ## Contents
 
+- [Family tree](#family-tree)
+- [Timeline](#timeline)
 - [How this list is organised](#how-this-list-is-organised)
-- [Lineage map](#lineage-map)
 - [1. The original & the fixed-corpus line](#1-the-original--the-fixed-corpus-line)
 - [2. The language line](#2-the-language-line)
 - [3. The multimodal line](#3-the-multimodal-line)
@@ -22,25 +32,86 @@
 - [Derivatives & evaluation settings](#derivatives--evaluation-settings)
 - [Comparison table](#comparison-table)
 - [A note on conflicting figures](#a-note-on-conflicting-figures)
-- [Coverage & audit](#coverage--audit)
+- [Coverage notes](#coverage-notes)
 - [Contributing](#contributing)
 - [Citation](#citation)
 - [License](#license)
 
+## Family tree
+
+```mermaid
+flowchart LR
+    ROOT["<b>BrowseComp</b><br/>OpenAI · 2025 · 1,266 Qs"]
+
+    ROOT --> L1["<b>1 · Original &amp; fixed-corpus</b>"]
+    ROOT --> L2["<b>2 · Language</b>"]
+    ROOT --> L3["<b>3 · Multimodal</b>"]
+    ROOT --> L4["<b>4 · Temporal</b>"]
+    ROOT --> L5["<b>5 · Domain</b>"]
+    ROOT --> L6["<b>6 · Breadth · find-all</b>"]
+    ROOT --> L7["<b>7 · Depth-successors</b>"]
+
+    L1 --> A1["BrowseComp-Plus"] --> A2["XBCP"]
+    L2 --> B1["BrowseComp-ZH"]
+    L2 --> B2["K-BrowseComp"]
+    L2 --> B3["SnapshotBrowseComp"]
+    L2 --> B4["HyperBrowseComp"]
+    L3 --> C1["MM-BrowseComp"]
+    L3 --> C2["BrowseComp-VL"]
+    L3 --> C3["BrowseComp-V³"]
+    L4 --> D1["LiveBrowseComp"]
+    L4 --> D2["EvoBrowseComp"]
+    L5 --> E1["MedBrowseComp"]
+    L6 --> F1["WideSearch"]
+    L6 --> F2["DeepSearchQA"]
+    L6 --> F3["Ko-WideSearch"]
+    L6 --> F4["ATLAS"]
+    L6 --> F5["WANDR"]
+    L7 --> G1["FinSearchComp"]
+    L7 --> G2["LoHoSearch"]
+    L7 --> G3["xbench-DeepSearch"]
+
+    ROOT -.-> DER["<i>Derivatives &amp; settings</i><br/>Small · PlusCM → CMASS · ZH-revised<br/>Long Context · Wikipedia · MAST · plus-mini"]
+
+    classDef root fill:#173a5e,stroke:#38bdf8,color:#f8fafc,stroke-width:2px;
+    classDef line fill:#eef2ff,stroke:#818cf8,color:#1e293b;
+    classDef der fill:#fff7ed,stroke:#fb923c,color:#7c2d12,stroke-dasharray:5 5;
+    class ROOT root;
+    class L1,L2,L3,L4,L5,L6,L7 line;
+    class DER der;
+```
+
+## Timeline
+
+```mermaid
+timeline
+    title Releases of the BrowseComp family
+    2025 : Apr · BrowseComp (OpenAI)
+         : Apr · BrowseComp-ZH
+         : May · MedBrowseComp
+         : Aug · BrowseComp-Plus
+         : Aug · MM-BrowseComp
+         : Aug · BrowseComp-VL
+         : Aug · WideSearch
+         : Sep · FinSearchComp (ICLR 2026)
+         : 2025 · xbench-DeepSearch (2505 / 2510)
+         : Dec · DeepSearchQA (Google)
+    2026 : Feb · BrowseComp-V³
+         : May · LiveBrowseComp
+         : Jun · XBCP
+         : Jun · K-BrowseComp
+         : Jun · EvoBrowseComp
+         : Jun · LoHoSearch
+         : Jun · Ko-WideSearch
+         : Jul · WANDR
+         : Oct · HyperBrowseComp
+         : Oct · SnapshotBrowseComp
+         : Oct · ATLAS
+```
+
 ## How this list is organised
 
-**Independent variants** have their own questions, corpus or modality and an official paper, repository or dataset release. They are grouped into seven *lineage lines* by what they changed relative to the original.
-
-**Derivatives & settings** reuse an existing variant's questions — subsets, answer revisions, corpus projections, shared-task projections, or a new evaluation context — and are listed separately so the counts stay honest.
-
-Two inclusion rulings, applied consistently:
-
-1. **Lineage is functional, not nominal.** A benchmark that drops the "BrowseComp" name but is built as exhaustive set retrieval and positions itself directly against BrowseComp-style single-answer deep search (e.g. WideSearch, DeepSearchQA) belongs to the family.
-2. **When sources disagree, both figures are shown.** Question counts, corpus sizes and version differences are never silently merged — see [A note on conflicting figures](#a-note-on-conflicting-figures).
-
-**How to read an entry.** `Size` = number of questions/tasks. `Env` = *Open web* (the agent browses the live internet) or *Fixed corpus* (a frozen document collection is provided). "Best reported" is the strongest result stated in the entry's own paper/release, under that work's own setup — scores are **not** comparable across entries.
-
-## Lineage map
+**Independent variants** have their own questions, corpus or modality and an official paper, repository or dataset release. They are grouped into seven *lineage lines* by what they changed relative to the original:
 
 | Line | What changed | Members |
 |---|---|---|
@@ -51,6 +122,15 @@ Two inclusion rulings, applied consistently:
 | 5. Domain | Expert professional domains | MedBrowseComp |
 | 6. Breadth (find-all) | The answer is a *set*: miss one, add one, or err on one and the item fails | WideSearch · DeepSearchQA · Ko-WideSearch · ATLAS · WANDR |
 | 7. Depth-successor | Same single-answer format, aimed at the original's ceilings: saturation, expert depth, language/task coverage | FinSearchComp · LoHoSearch · xbench-DeepSearch |
+
+**Derivatives & settings** reuse an existing variant's questions — subsets, answer revisions, corpus projections, shared-task projections, or a new evaluation context — and are listed separately so the counts stay honest.
+
+Two inclusion rulings, applied consistently:
+
+1. **Lineage is functional, not nominal.** A benchmark that drops the "BrowseComp" name but is built as exhaustive set retrieval and positions itself directly against BrowseComp-style single-answer deep search (e.g. WideSearch, DeepSearchQA) belongs to the family.
+2. **When sources disagree, both figures are shown.** Question counts, corpus sizes and version differences are never silently merged — see [A note on conflicting figures](#a-note-on-conflicting-figures).
+
+**How to read an entry.** `Size` = number of questions/tasks. `Env` = *Open web* (the agent browses the live internet) or *Fixed corpus* (a frozen document collection is provided). "Best reported" is the strongest result stated in the entry's own paper/release, under that work's own setup — scores are **not** comparable across entries.
 
 ---
 
@@ -272,6 +352,16 @@ A community (non-official) 15-question proxy of BrowseComp-Plus for cheap local 
 
 *Derivatives are excluded from this table; see their section above. "—" = not specified in the source.*
 
+### Sizes at a glance
+
+```mermaid
+xychart-beta
+    title "Questions per benchmark (independent variants)"
+    x-axis ["BrowseComp", "Plus", "XBCP", "ZH", "K", "Snapshot", "Hyper", "MM", "VL", "V3", "Live", "Evo", "Med", "Wide", "DSQA", "KoWide", "ATLAS", "WANDR", "Fin", "LoHo", "xbench"]
+    y-axis "Questions" 0 --> 1300
+    bar [1266, 830, 830, 289, 400, 250, 423, 400, 399, 300, 335, 800, 1089, 200, 900, 228, 547, 500, 635, 544, 200]
+```
+
 ## A note on conflicting figures
 
 This family is young and fast-moving; sources genuinely disagree. This list preserves both numbers instead of picking one:
@@ -286,19 +376,19 @@ This family is young and fast-moving; sources genuinely disagree. This list pres
 - **DeepSearchQA:** paper dated Dec 2025; the arXiv version is Jan 2026 (2601.20975).
 - **xbench-DeepSearch:** two releases scored separately; never merge 2505 and 2510 results.
 
-## Coverage & audit
+## Coverage notes
 
-This catalogue was assembled by sweeping arXiv, GitHub and Hugging Face twice — once by name, once by functional lineage (renamed descendants) — and verifying every entry against a primary source (paper, official repository or dataset page), last on **2026-11-11**.
+The catalogue was assembled by sweeping arXiv, GitHub and Hugging Face twice — once by name, once by functional lineage (renamed descendants) — in November 2026.
 
-Explicitly checked and **not** existing as standalone releases (as of the audit date): Arabic / French / Spanish / Russian / Hindi / Japanese editions beyond SnapshotBrowseComp; DeepBrowseComp; BrowseComp-Hard / -Temporal / -Live / -Dynamic; BrowseComp 2; FreshBrowseComp; Fin/Legal/Sci/Code-BrowseComp as named releases.
+Checked and **not** existing as standalone releases (as of Nov 2026): Arabic / French / Spanish / Russian / Hindi / Japanese editions beyond SnapshotBrowseComp; DeepBrowseComp; BrowseComp-Hard / -Temporal / -Live / -Dynamic; BrowseComp 2; FreshBrowseComp; Fin/Legal/Sci/Code-BrowseComp as named releases.
 
 Checked and **excluded**: DeepResearch Bench I/II and DRACO (long-report rubrics, not answer sets); InfoDeepSeek (single-answer, different lineage); AssistantBench (2024, predates BrowseComp); ORBIT (a training-data pipeline, not a benchmark); Total Recall QA (document-level total recall, single answer); unnamed vendor evaluation slices and leaderboard subsets; dataset mirrors, forks and run-output repositories.
 
-*Caveat:* the sweep used search-engine-indexed pages rather than exhaustive API enumeration of GitHub/HF; a release only days old or unindexed could in principle be missed. If you find one, please open an issue or PR.
+*Caveat:* the sweep used search-indexed pages rather than exhaustive API enumeration of GitHub/HF; a release only days old or unindexed could in principle be missed. If you find one, please open an issue or PR.
 
 ## Contributing
 
-Contributions are welcome — new variants, corrections, and updated results. Please read [CONTRIBUTING.md](CONTRIBUTING.md) first: every entry must be verifiable against a primary source, and conflicting figures must be presented side by side, never silently merged.
+Contributions are welcome — new variants, corrections, and updated results. Please read [CONTRIBUTING.md](CONTRIBUTING.md) first: entries need a primary source (paper, official repository or dataset page), and conflicting figures are presented side by side, never silently merged.
 
 A machine-readable version of the catalogue is in [`benchmarks.json`](benchmarks.json).
 

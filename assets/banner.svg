@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="340" viewBox="0 0 1280 340" role="img" aria-label="Awesome BrowseComp — the BrowseComp benchmark family, in one list">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1226"/>
+      <stop offset="0.55" stop-color="#101d3d"/>
+      <stop offset="1" stop-color="#173a5e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="340" fill="url(#bg)"/>
+
+  <!-- branch motif -->
+  <g stroke-linecap="round" fill="none">
+    <path d="M120 252 C 300 252, 330 96, 520 96" stroke="#38bdf8" stroke-width="3" opacity="0.85"/>
+    <path d="M120 252 C 320 252, 360 150, 560 150" stroke="#60a5fa" stroke-width="3" opacity="0.7"/>
+    <path d="M120 252 C 340 252, 380 204, 600 204" stroke="#818cf8" stroke-width="3" opacity="0.7"/>
+    <path d="M120 252 C 320 252, 420 252, 640 252" stroke="#a78bfa" stroke-width="3" opacity="0.85"/>
+    <path d="M120 252 C 300 252, 360 300, 560 300" stroke="#c084fc" stroke-width="3" opacity="0.55"/>
+  </g>
+  <g>
+    <circle cx="120" cy="252" r="10" fill="#f8fafc"/>
+    <circle cx="120" cy="252" r="17" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.6"/>
+    <circle cx="520" cy="96" r="6" fill="#38bdf8"/>
+    <circle cx="560" cy="150" r="6" fill="#60a5fa"/>
+    <circle cx="600" cy="204" r="6" fill="#818cf8"/>
+    <circle cx="640" cy="252" r="6" fill="#a78bfa"/>
+    <circle cx="560" cy="300" r="6" fill="#c084fc"/>
+  </g>
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#cbd5e1">
+    <text x="540" y="90">Language</text>
+    <text x="580" y="144">Multimodal</text>
+    <text x="620" y="198">Fixed corpus</text>
+    <text x="660" y="246">Find-all breadth</text>
+    <text x="580" y="306">Depth successors</text>
+  </g>
+
+  <!-- headline -->
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif">
+    <text x="72" y="118" font-size="64" font-weight="700" fill="#f8fafc">Awesome <tspan fill="url(#accent)">BrowseComp</tspan></text>
+    <text x="74" y="162" font-size="24" fill="#cbd5e1">The BrowseComp benchmark family — variants, derivatives and successors, in one list.</text>
+    <text x="74" y="196" font-size="19" fill="#94a3b8">21 independent variants · 7 derivatives · 7 lineage lines · 2025 – 2026</text>
+  </g>
+
+  <rect x="72" y="286" width="330" height="2" fill="url(#accent)" opacity="0.8"/>
+  <text x="72" y="312" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#94a3b8">Benchmarks for browsing &amp; deep-research agents</text>
+</svg>
